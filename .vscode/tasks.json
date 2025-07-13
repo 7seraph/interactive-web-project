@@ -1,0 +1,11 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "shell",
+			"label": "Move site files to root for GitHub Pages",
+			"command": "move src\\index.html . && move src\\more-info.html . && move src\\previous-coursework.html . && move src\\projects.html . && move src\\spotify-recommendation.html . && move src\\spotify-recommendation-app.js . && move src\\css . && move src\\js .",
+			"group": "build"
+		}
+	]
+}

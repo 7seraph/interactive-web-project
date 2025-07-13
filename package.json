@@ -2,7 +2,7 @@
   "name": "interactive-web-project",
   "version": "1.0.0",
   "description": "A modern interactive landing page with flyouts and interactive elements.",
-  "main": "src/index.html",
+  "main": "index.html",
   "scripts": {
     "start": "live-server src",
     "build": "echo 'Build step not defined'"
