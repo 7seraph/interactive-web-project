@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More Info</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>More Info</h1>
+        <button onclick="navigateToPage('index')">Home</button>
+        <button onclick="navigateToPage('more-info')">More Info</button>
+        <button onclick="navigateToPage('previous-coursework')">Previous Coursework</button>
+        <button onclick="navigateToPage('applications')">Applications</button>
+        <button onclick="navigateToPage('projects')">Projects</button>
+    </header>
+    <section>
+        <p>This page contains additional information about me.</p>
+    </section>
+    <script>
+        function navigateToPage(pageName) {
+            window.location.href = `${pageName}.html`;
+        }
+    </script>
+</body>
+</html>

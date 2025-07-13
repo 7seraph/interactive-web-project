@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Projects</h1>
+        <button onclick="navigateToPage('index')">Home</button>
+        <button onclick="navigateToPage('more-info')">More Info</button>
+        <button onclick="navigateToPage('previous-coursework')">Previous Coursework</button>
+        <button onclick="navigateToPage('applications')">Applications</button>
+        <button onclick="navigateToPage('projects')">Projects</button>
+    </header>
+    <section>
+        <p>This page highlights the projects I have completed or am currently working on.</p>
+        <h2>Showcase: Course Projects</h2>
+        <ul>
+            <li>
+                <a href="https://github.com/7seraph/phishnet" target="_blank">PhishNet (2025 ACM @ UCSD "Best Solo Hack" Winner)</a> – Developed a phishing detection system using machine learning techniques. Implemented a web scraper to gather data and trained a model to classify URLs as phishing or legitimate.
+            </li>
+            <li>
+                <a href="https://github.com/7seraph/Battleship" target="_blank">Battleship</a> – Used DQN, MC, and TD to see how these models perform on our custom simulation of the battleship game.
+            </li>
+            <li>
+                <a href="https://github.com/7seraph/cogs189project" target="_blank">Classification of Left/Right hand movement via BCI</a> – We use replicate a study from Wang et Al to test a classification algorithm and view its performance. 
+            </li>
+            <li>
+                <a href="https://github.com/7seraph/planetflip" target="_blank">PlanetFlip</a> – Created an educational game about waste management and recycling. The game teaches players about the importance of recycling and waste reduction through interactive gameplay written in C.
+            </li>
+            <!-- Add more project links as needed -->
+        </ul>
+        <ul>
+            <li><a href="spotify-recommendation.html">Spotify Recommendation</a></li>
+        </ul>
+    </section>
+    <script>
+        function navigateToPage(pageName) {
+            window.location.href = `${pageName}.html`;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Interactive Landing Page</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .intro-box {
+            margin: 20px auto;
+            padding: 20px;
+            max-width: 600px;
+            background-color: #ffffff;
+            border: 2px solid #101871;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: left;
+        }
+        .intro-box h3 {
+            margin-top: 0;
+            color: #101871;
+        }
+        .intro-box p {
+            margin: 10px 0;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Kevin Tran</h1>
+        <p>Location: Anaheim, US</p>
+        <p>Age: 22</p>
+        <button id="infoButton">More Info</button>
+        <button id="courseworkButton">Previous Coursework</button>
+        <button id="applicationsButton">Applications</button>
+        <button id="projectsButton">Projects</button>
+    </header>
+    <section>
+        <div class="intro-box">
+            <h3>Introduction</h3>
+            <p>Hi there! My name is Kevin, and I am passionate about [Your Passion or Field]. I enjoy working on projects that involve [Your Interests]. This page is a glimpse into my journey, showcasing my work, achievements, and aspirations. Feel free to explore and learn more about me!</p>
+        </div>
+    </section>
+    <div id="flyout" class="flyout">
+        <h3>Additional Information</h3>
+        <p>This is some additional information about me that can be shown or hidden.</p>
+        <button id="closeButton">Close</button>
+    </div>
+    <div id="courseworkFlyout" class="flyout">
+        <h3>Previous Coursework</h3>
+        <p>Here is a list of my previous coursework and academic achievements.</p>
+        <button id="closeCourseworkButton">Close</button>
+    </div>
+    <div id="applicationsFlyout" class="flyout">
+        <h3>Applications</h3>
+        <p>Here are some applications I have worked on or contributed to.</p>
+        <button id="closeApplicationsButton">Close</button>
+    </div>
+    <div id="projectsFlyout" class="flyout">
+        <h3>Projects</h3>
+        <p>Here are some of the projects I have completed or am currently working on.</p>
+        <button id="closeProjectsButton">Close</button>
+    </div>
+    <script src="js/scripts.js"></script>
+</body>
+</html>

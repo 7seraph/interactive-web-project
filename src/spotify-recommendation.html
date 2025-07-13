@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify Recommendation</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Spotify Recommendation</h1>
+        <button onclick="navigateToPage('index')">Home</button>
+        <button onclick="navigateToPage('projects')">Back to Projects</button>
+    </header>
+    <section>
+        <p>This project is a Spotify Recommendation system that suggests songs based on user preferences and listening history. It uses machine learning algorithms to analyze data and provide personalized recommendations.</p>
+        <p>Check out the project on <a href="https://github.com/7seraph/spotify-recommendation" target="_blank">GitHub</a>.</p>
+    </section>
+    <section>
+        <h2>Get Spotify Recommendations</h2>
+        <form id="recommendationForm">
+            <label for="seedType">Seed Type:</label>
+            <select id="seedType" required>
+                <option value="artist">Artist</option>
+                <option value="track">Track</option>
+                <option value="genre">Genre</option>
+            </select>
+            <label for="seedValue">Seed Value:</label>
+            <input type="text" id="seedValue" placeholder="Enter artist, track, or genre" required />
+            <button type="submit">Get Recommendations</button>
+        </form>
+        <div id="recommendations"></div>
+    </section>
+    <script>
+        function navigateToPage(pageName) {
+            window.location.href = `${pageName}.html`;
+        }
+    </script>
+    <script src="spotify-recommendation-app.js"></script>
+</body>
+</html>
