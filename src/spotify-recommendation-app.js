@@ -1,6 +1,5 @@
 // Replace with your Spotify API credentials
 const CLIENT_ID = '8d4eedabeb334f378fdb6a1b60026fd7';
-const CLIENT_SECRET = 'c8234114ed2e46cd8fb44faf54cc47b9';
 let accessToken = '';
 
 // Function to get Spotify API access token
@@ -9,7 +8,7 @@ async function getAccessToken() {
         method: 'POST',
         headers: {
             'Content-Type': 'application/x-www-form-urlencoded',
-            'Authorization': 'Basic ' + btoa(`${CLIENT_ID}:${CLIENT_SECRET}`)
+            'Authorization': 'Basic ' + btoa(`${CLIENT_ID}`)
         },
         body: 'grant_type=client_credentials'
     });
@@ -18,16 +17,10 @@ async function getAccessToken() {
     accessToken = data.access_token;
 }
 
-// Function to fetch recommendations based on a seed artist, track, or genre
+// Function to fetch recommendations from your backend
 async function getRecommendations(seedType, seedValue) {
-    const url = `https://api.spotify.com/v1/recommendations?seed_${seedType}=${seedValue}&limit=10`;
-
-    const response = await fetch(url, {
-        headers: {
-            'Authorization': `Bearer ${accessToken}`
-        }
-    });
-
+    const url = `/api/recommendations?seedType=${encodeURIComponent(seedType)}&seedValue=${encodeURIComponent(seedValue)}`;
+    const response = await fetch(url);
     const data = await response.json();
     return data.tracks;
 }
